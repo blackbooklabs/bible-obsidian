@@ -1,6 +1,6 @@
 <div align="center">
 
-# ✝️ The Divine Vault
+# 🕊️ The Divine Vault ☦️
 
 ### A Verse-Level Canonical Dataset for the Ethiopian 81-Book Bible
 
