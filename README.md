@@ -1,4 +1,8 @@
 <div align="center">
+  <img src=".github/social-preview.png" alt="The Divine Vault Social Preview" width="100%">
+</div>
+
+<div align="center">
 
 # 🕊️ The Divine Vault ☦️
 
