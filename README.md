@@ -6,7 +6,7 @@
 
 **41,148 verses** · **7 canonical sections** · **81 books** · **Zero interpretation**
 
-Built by [Black Book Labs](https://github.com/blackbooklabs) for the JEXXXUS Theological Intelligence Engine
+Built by [BLXCKBOOK Labs](https://github.com/blackbooklabs) for the JEXXXUS Theological Intelligence Engine
 
 ---
 
@@ -223,6 +223,6 @@ This is a **Source of Truth** repository. Contributions must adhere to the Iron 
 *"The words of the blessing of Enoch, wherewith he blessed the elect and righteous."*<br>
 — **1 Enoch 1:1**
 
-**Black Book Labs** · [github.com/blackbooklabs](https://github.com/blackbooklabs)
+**BLXCKBOOK Labs** · [github.com/blackbooklabs](https://github.com/blackbooklabs)
 
 </div>
