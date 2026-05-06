@@ -1,4 +1,4 @@
-<![CDATA[<div align="center">
+<div align="center">
 
 # ✝️ The Divine Vault
 
@@ -33,7 +33,7 @@ A strict validation rule governs this vault: only files tagged with `source_type
 
 ## Vault Structure
 
-```
+```text
 bible-obsidian/
 ├── 00_META/                        # Manifesto & governance
 ├── 00_Schema.md                    # YAML frontmatter specification
@@ -96,9 +96,7 @@ verse: 1
 source_type: Scripture
 ---
 
-The words of the blessing of Enoch, wherewith he blessed the elect
-and righteous, who will be living in the day of tribulation, when all
-the wicked and godless are to be removed.
+The words of the blessing of Enoch, wherewith he blessed the elect and righteous, who will be living in the day of tribulation, when all the wicked and godless are to be removed.
 ```
 
 The `canon_tier` field allows downstream models to distinguish between core canon (`Masoretic`, `Septuagint`) and the broader Ethiopian tradition, enabling nuanced theological reasoning without conflating sources.
@@ -119,20 +117,21 @@ The `divine_training_set.jsonl` file contains one JSON object per line, structur
 ```
 
 | Field | Purpose |
-|-------|---------|
+| :--- | :--- |
 | `instruction` | The natural language query a user or agent would ask |
 | `thinking` | Chain-of-thought reasoning block for the model's internal process |
 | `context` | Canonical source identifier for grounding |
 | `response` | Verbatim scripture — the only acceptable output |
 
-The `thinking` field is specifically designed for models that support structured reasoning (Gemma 4, etc.), training the model to verify canonical source and location *before* producing output.
+> [!NOTE]
+> The `thinking` field is specifically designed for models that support structured reasoning (Gemma 4, etc.), training the model to verify canonical source and location *before* producing output.
 
 ---
 
 ## Ingestion Coverage
 
 | Section | Books | Verses | Status |
-|---------|-------|--------|--------|
+| :--- | :--- | :--- | :--- |
 | Torah | 5 | 5,852 | ✅ Complete |
 | Historical | 12 | 7,018 | ✅ Complete |
 | Poetic | 5 | 4,792 | ✅ Complete |
@@ -149,7 +148,7 @@ The `thinking` field is specifically designed for models that support structured
 The `scripts/` directory contains the Node.js ingestion pipeline:
 
 | Script | Purpose |
-|--------|---------|
+| :--- | :--- |
 | `jsonl-forge-plain.js` | Walks the entire vault and generates `divine_training_set.jsonl` |
 | `chunk_apostolic.js` | Parses the Apostolic Constitutions (Book → Chapter → Verse) |
 | `chunk_didascalia.js` | Parses the Didascalia Apostolorum (Chapter → Verse) |
@@ -171,14 +170,15 @@ This will crawl all `.md` files in the vault, validate the `source_type: Scriptu
 This dataset is designed for **QLoRA fine-tuning** on Gemma 4 using the following stack:
 
 | Component | Choice | Rationale |
-|-----------|--------|-----------|
+| :--- | :--- | :--- |
 | Framework | Unsloth + Axolotl | Optimized for Gemma; 2-5x speedup |
 | Method | QLoRA (4-bit) | Preserves base model reasoning |
 | Rank | r=64 to r=128 | High capacity for dense theological text |
 | Target Modules | All linear layers | Maximum absorption of canonical structure |
 | Dataset | `divine_training_set.jsonl` | 41,148 instruction/response pairs |
 
-The QLoRA approach ensures that the base model's general intelligence remains intact while the adapter layers absorb the full weight of the 81-book canon. The model learns to *reason with* scripture rather than merely recite it.
+> [!TIP]
+> The QLoRA approach ensures that the base model's general intelligence remains intact while the adapter layers absorb the full weight of the 81-book canon. The model learns to *reason with* scripture rather than merely recite it.
 
 ---
 
@@ -220,10 +220,9 @@ This is a **Source of Truth** repository. Contributions must adhere to the Iron 
 
 <div align="center">
 
-*"The words of the blessing of Enoch, wherewith he blessed the elect and righteous."*
-— 1 Enoch 1:1
+*"The words of the blessing of Enoch, wherewith he blessed the elect and righteous."*<br>
+— **1 Enoch 1:1**
 
 **Black Book Labs** · [github.com/blackbooklabs](https://github.com/blackbooklabs)
 
 </div>
-]]>
