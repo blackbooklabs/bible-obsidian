@@ -23,6 +23,8 @@ Built by [BLXCKBOOK Labs](https://github.com/blackbooklabs) for the JEXXXUS Theo
   <img src=".github/social-preview.png" alt="The Divine Vault Social Preview" width="100%">
 </div>
 
+---
+
 ## What Is This?
 
 The Divine Vault is a **machine-readable, verse-level decomposition** of the complete Ethiopian Orthodox Tewahedo 81-book biblical canon. Every verse exists as an individual Markdown file with structured YAML frontmatter, designed to serve as the **Source of Truth** for fine-tuning large language models on canonical scripture.
