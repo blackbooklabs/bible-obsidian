@@ -6,8 +6,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
 const gray_matter_1 = __importDefault(require("gray-matter"));
-const VAULT_PATH = '/Users/dylanroberts/Documents/non-music/Dev/GitHub/+ Sir the Baptist/bible-obsidian';
-const OUTPUT_PATH = '/Users/dylanroberts/Documents/non-music/Dev/GitHub/+ Sir the Baptist/divine_training_set.jsonl';
+const VAULT_PATH = '../bible-obsidian';
+const OUTPUT_PATH = '../divine_training_set.jsonl';
 async function forge() {
     console.log('🚀 Initializing JSONL Forge...');
     const files = getAllFiles(VAULT_PATH);
