@@ -1,8 +1,4 @@
 <div align="center">
-  <img src=".github/social-preview.png" alt="The Divine Vault Social Preview" width="100%">
-</div>
-
-<div align="center">
 
 # 🕊️ The Divine Vault ☦️
 
@@ -22,6 +18,10 @@ Built by [BLXCKBOOK Labs](https://github.com/blackbooklabs) for the JEXXXUS Theo
 </div>
 
 ---
+
+<div align="center">
+  <img src=".github/social-preview.png" alt="The Divine Vault Social Preview" width="100%">
+</div>
 
 ## What Is This?
 
