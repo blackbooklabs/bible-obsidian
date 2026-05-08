@@ -27,7 +27,7 @@ function parseFrontmatter(content) {
   };
 }
 
-const VAULT_PATH = '../bible-obsidian';
+const VAULT_PATH = '..';
 const OUTPUT_PATH = '../divine_training_set.jsonl';
 
 function getAllFiles(dirPath, arrayOfFiles = []) {
